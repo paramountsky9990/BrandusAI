@@ -1,5 +1,5 @@
 # echo "build loading.........."
-python3 install -r requirements.txt
+python3 -m install -r requirements.txt
 
 # echo "staticfiles build....."
 python3 manage.py collectstatic --noinput --clear
