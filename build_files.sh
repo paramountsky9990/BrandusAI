@@ -2,7 +2,7 @@
 python3 install -r requirements.txt
 
 # echo "staticfiles build....."
-python3 manage.py collectstatic --noinput
+python3 manage.py collectstatic --noinput --clear
 
 # #!/bin/bash
 
