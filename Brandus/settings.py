@@ -175,7 +175,7 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 SOCIALACCOUNT_LOGIN_ON_GET=True
 SOCIALACCOUNT_PROVIDERS = {
-  "google": {
+    "google": {
         'EMAIL_AUTHENTICATION': True,
         "APPS": [
             {
@@ -184,8 +184,6 @@ SOCIALACCOUNT_PROVIDERS = {
                 "key": ""
             },
         ],
-        # These are provider-specific settings that can only be
-        # listed here:
         "SCOPE": [
             "profile",
             "email",
@@ -197,12 +195,33 @@ SOCIALACCOUNT_PROVIDERS = {
     },
     'facebook': {
         'APP': {
-            'client_id': os.environ.get("FACEBOOK_CLIENT_ID",""),
-            'secret': os.environ.get("FACEBOOK_SECRET",""),
+            'client_id': os.environ.get("FACEBOOK_CLIENT_ID", ""),
+            'secret': os.environ.get("FACEBOOK_SECRET", ""),
             'key': ''
         }
     },
-     "openid_connect": {
+    "twitter": {
+        'APP': {
+            'client_id': os.environ.get("TWITTER_CLIENT_ID", ""),
+            'secret': os.environ.get("TWITTER_SECRET", ""),
+            'key': ''
+        }
+    },
+    "instagram": {
+        'APP': {
+            'client_id': os.environ.get("INSTAGRAM_CLIENT_ID", ""),
+            'secret': os.environ.get("INSTAGRAM_SECRET", ""),
+            'key': ''
+        }
+    },
+    "youtube": {
+        'APP': {
+            'client_id': os.environ.get("YOUTUBE_CLIENT_ID", ""),
+            'secret': os.environ.get("YOUTUBE_SECRET", ""),
+            'key': ''
+        }
+    },
+    "openid_connect": {
         "APPS": [
             {
                 "provider_id": "linkedin",
@@ -216,6 +235,7 @@ SOCIALACCOUNT_PROVIDERS = {
         ]
     }
 }
+
 SOCIALACCOUNT_EMAIL_AUTHENTICATION_AUTO_CONNECT = True
 SOCIALACCOUNT_STORE_TOKENS = True
 
